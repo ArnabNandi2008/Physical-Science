@@ -1,91 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Temperature Converter</title>
-    <script>
-        function fc(i) {
-            o = (((5*i)-160) /9)
-            return o
-        }
-        function fk(i) {
-            o = (((5*i)+2297)/9)
-            return o
-        }
-        function ck(i) {
-            o = i+273
-            return o
-        }
-        function cf(i) {
-            o = (((9*i)+160)/5)
-            return o
-        }
-        function kc(i) {
-            o = i-273
-            return o
-        }
-        function kf(i) {
-            o = (((9*i)-2297)/5)
-            return o
-        }
-        function Submit() {
-            i = parseInt(document.frm.i.value)
-            di = document.frm.from.value
-            dt = document.frm.to.value
-            fn = di + dt
-            o = 0
-            if ((fn == "cc") || (fn == "ff") || (fn == "kk")) {
-                o = i
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Temperature Converter</title>
+        <script>
+            function fc(i) {
+                o = (((5*i)-160) /9)
+                return o
             }
-            else if (fn == "cf") {
-                o = cf(i)
+            function fk(i) {
+                o = (((5*i)+2297)/9)
+                return o
             }
-            else if (fn == "ck") {
-                o = ck(i)
+            function ck(i) {
+                o = i+273
+                return o
             }
-            else if (fn == "fc") {
-                o = fc(i)
+            function cf(i) {
+                o = (((9*i)+160)/5)
+                return o
             }
-            else if (fn == "fk") {
-                o = fk(i)
+            function kc(i) {
+                o = i-273
+                return o
             }
-            else if (fn == "kc") {
-                o = kc(i)
+            function kf(i) {
+                o = (((9*i)-2297)/5)
+                return o
             }
-            else if (fn == "kf") {
+            function Submit() {
+                i = parseInt(document.frm.i.value)
+                di = document.frm.from.value
+                dt = document.frm.to.value
+                fn = di + dt
+                o = 0
+                if ((fn == "cc") || (fn == "ff") || (fn == "kk")) {
+                    o = i
+                }
+                else if (fn == "cf") {
+                    o = cf(i)
+                }
+                else if (fn == "ck") {
+                    o = ck(i)
+                }
+                else if (fn == "fc") {
+                    o = fc(i)
+                }
+                else if (fn == "fk") {
+                    o = fk(i)
+                }
+                else if (fn == "kc") {
+                    o = kc(i)
+                }
+                else {
                 o = kf(i)
+                }
+                document.frm.o.value = o
             }
-            document.frm.o.value = o
-        }
-        function Exchange() {
-            a = document.frm.o.value
-            document.frm.o.value = document.frm.i.value
-            document.frm.i.value = a
-            b = document.frm.from.value
-            document.frm.from.value = document.frm.to.value
-            document.frm.to.value = b
-        }
-    </script>
-</head>
-<body>
-    <form name="frm">
-        <label>From </label><input type="textbox" name="i" placeholder="Enter the temperature">
-        <select name="from">
-            <option value="c">Celcius</option>
-            <option value="f">Fahrenheit</option>
-            <option value="k">Kelvin</option>
-        </select>
-        <br>
-        <input type="button" value="Exchange" onClick="Exchange()">
-        <br>
-        <label>To </label><input type="textbox" name="o" disabled>
-        <select name="to">
-            <option value="c">Celcius</option>
-            <option value="f">Fahrenheit</option>
-            <option value="k">Kelvin</option>
-        </select>
-        <input type="button" value="Submit" onclick="Submit()">
-    </form>
-</body>
+            function Exchange() {
+                a = document.frm.o.value
+                document.frm.o.value = document.frm.i.value
+                document.frm.i.value = a
+                b = document.frm.from.value
+                document.frm.from.value = document.frm.to.value
+                document.frm.to.value = b
+            }
+        </script>
+    </head>
+    <body>
+        <table>
+            <form name="frm">
+                <tr>
+                    <td><label>From </label></td>
+                    <td><input type="textbox" name="i" placeholder="Enter the temperature"></td>
+                    <td>
+                        <select name="from">
+                            <option value="c">Celcius</option>
+                            <option value="f">Fahrenheit</option>
+                            <option value="k">Kelvin</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr><td colspan="3"><input type="button" value="Exchange" onClick="Exchange()"></td></tr>
+                <tr>
+                    <td><label>To </label></td>
+                    <td><input type="textbox" name="o" disabled></td>
+                    <td>
+                        <select name="to">
+                            <option value="c">Celcius</option>
+                            <option value="f">Fahrenheit</option>
+                            <option value="k">Kelvin</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr><td colspan="3"><input type="button" value="Submit" onclick="Submit()"></td></tr>
+            </form>
+        </table>
+    </body>
 </html>
