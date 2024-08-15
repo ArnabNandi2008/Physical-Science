@@ -5,30 +5,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Temperature Converter</title>
         <script>
-            function fc(i) {
-                o = (((5*i)-160) /9)
-                return o
-            }
-            function fk(i) {
-                o = (((5*i)+2297)/9)
-                return o
-            }
-            function ck(i) {
-                o = i+273
-                return o
-            }
-            function cf(i) {
-                o = (((9*i)+160)/5)
-                return o
-            }
-            function kc(i) {
-                o = i-273
-                return o
-            }
-            function kf(i) {
-                o = (((9*i)-2297)/5)
-                return o
-            }
             function Submit() {
                 i = parseInt(document.frm.i.value)
                 di = document.frm.from.value
@@ -39,22 +15,22 @@
                     o = i
                 }
                 else if (fn == "cf") {
-                    o = cf(i)
+                    o = (((9*i)+160)/5)
                 }
                 else if (fn == "ck") {
-                    o = ck(i)
+                    o = i+273
                 }
                 else if (fn == "fc") {
-                    o = fc(i)
+                    o = (((5*i)-160) /9)
                 }
                 else if (fn == "fk") {
-                    o = fk(i)
+                    o = (((5*i)+2297)/9)
                 }
                 else if (fn == "kc") {
-                    o = kc(i)
+                    o = i-273
                 }
                 else {
-                o = kf(i)
+                o = (((9*i)-2297)/5)
                 }
                 document.frm.o.value = o
             }
