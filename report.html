@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+</head>
+<body>
+    
+    <form action="https://formspree.io/f/xnnawkpe" method="POST" enctype="multipart/form-data">
+        <table>
+            <tr>
+                <td><label>Name (Optional)</label></td>
+                <td><input type="text" name="Name" placeholder="Enter your name"></td>
+            </tr>
+            <tr>
+                <td><label>Email (Optional)</label></td>
+                <td>
+                    <input type="email" name="Email" placeholder="Enter your email address">
+                    We will notify you when it will be done.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Describe<br>(Compulsory)</label>
+                </td>
+                <td>
+                    <textarea name="Text" rows="10" required></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>Screenshots (Optional)</td>
+                <td>
+                    <input type="file" name="SS">
+                </td>
+            </tr>
+        </table>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
