@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Converter</title>
+    <script src="Unit.js"></script>
+</head>
+<body>
+    <h1 style="text-align: center;"><u>Unit Converter</u></h1>
+    <form name="frm1">
+        <select name="dd" onchange="ValP(this.value)">
+            <option value="0" selected hidden>Select</option>
+            <option value="1" disabled>Area Converter</option>
+            <option value="2">Energy Converter</option>
+            <option value="3" disabled>Length Converter</option>
+            <option value="4" disabled>Power Converter</option>
+            <option value="5" disabled>Pressure Converter</option>
+            <option value="6" disabled>Speed Converter</option>
+            <option value="7">Temperature Converter</option>
+            <option value="8" disabled>Volume Converter</option>
+            <option value="9" disabled>Weight Converter</option>
+        </select>
+    </form>
+    <div id="Area" style="display: none;">
+        Area
+        <br>
+        Work In Progress
+    </div>
+    <div id="Energy" style="display: none;">
+        <table>
+            <form name="frm_E">
+                <tr>
+                    <td><label>From </label></td>
+                    <td><input type="textbox" name="i" placeholder="Enter the energy"></td>
+                    <td>
+                        <select name="from">
+                            <option value="c">Calorie</option>
+                            <option value="j">Joules</option>
+                            <option value="C">Kilocalorie</option>
+                            <option value="J">Kilojoules</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr><td colspan="3"><input type="button" value="Exchange" onClick="EExchange()"></td></tr>
+                <tr>
+                    <td><label>To </label></td>
+                    <td><input type="textbox" name="o" disabled></td>
+                    <td>
+                        <select name="to">
+                            <option value="c">Calorie</option>
+                            <option value="j">Joules</option>
+                            <option value="C">Kilocalorie</option>
+                            <option value="J">Kilojoules</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr><td colspan="3"><input type="button" value="Submit" onclick="ESubmit()"></td></tr>
+            </form>
+        </table>
+    </div>
+    <div id="Length" style="display: none;">
+        Length
+        <br>
+        Work In Progress
+    </div>
+    <div id="Power" style="display: none;">
+        Power
+        <br>
+        Work In Progress
+    </div>
+    <div id="Pressure" style="display: none;">
+        Pressure
+        <br>
+        Work In Progress
+    </div>
+    <div id="Speed" style="display: none;">
+        Speed
+        <br>
+        Work In Progress
+    </div>
+    <div id="Temperature" style="display: none;">
+        <form name="frm_T">
+            <table>
+                <tr>
+                    <td><label>From </label></td>
+                    <td><input type="textbox" name="i" placeholder="Enter the temperature"></td>
+                    <td>
+                        <select name="from">
+                            <option value="c">Celcius</option>
+                            <option value="f">Fahrenheit</option>
+                            <option value="k">Kelvin</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr><td colspan="3"><input type="button" value="Exchange" onClick="TExchange()"></td></tr>
+                <tr>
+                    <td><label>To </label></td>
+                    <td><input type="textbox" name="o" disabled></td>
+                    <td>
+                        <select name="to">
+                            <option value="c">Celcius</option>
+                            <option value="f">Fahrenheit</option>
+                            <option value="k">Kelvin</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr><td colspan="3"><input type="button" value="Submit" onclick="TSubmit()"></td></tr>
+            </table>
+        </form>
+    </div>
+    <div id="Volume" style="display: none;">
+        Volume
+        <br>
+        Work In Progress
+    </div>
+    <div id="Weight" style="display: none;">
+        Weight
+        <br>
+        Work In Progress
+    </div>
+</body>
+</html>
