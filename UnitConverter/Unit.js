@@ -7,6 +7,19 @@ function ValP(n) {
     }
     document.getElementById(b).style.display = "block"
 }
+function SICalc(a,b) {
+    A = {
+        quetta:30, ronna:27, yotta:24, zetta:21, exa:18,
+        peta:15, tera:12, giga:9, mega:6, kilo:3,
+        hecto:2, deca:1, AN:0, deci:-1, centi:-2,
+        milli:-3, micro:-6, nano:-9, pico:-12, femto:-15,
+        atto:-18, zepto:-21, yocto:-24, ronto:-27, quecto:-30
+        }
+    av = A[a]
+    bv = A[b]
+    tv = av-bv
+    return tv
+}
 function ESubmit() {
     i = parseFloat(document.frm_E.i.value)
     di = document.frm_E.from.value
@@ -62,6 +75,22 @@ function EExchange() {
     document.frm_E.from.value = document.frm_E.to.value
     document.frm_E.to.value = b
 }
+function LSubmit() {
+    i = parseFloat(document.frm_L.i.value)
+    di = document.frm_L.from.value
+    dt = document.frm_L.to.value
+    exp = SICalc(di,dt)
+    o = i*Math.pow(10,exp)
+    document.frm_L.o.value = o
+}
+function LExchange() {
+    a = document.frm_L.o.value
+    document.frm_L.o.value = document.frm_L.i.value
+    document.frm_L.i.value = a
+    b = document.frm_L.from.value
+    document.frm_L.from.value = document.frm_L.to.value
+    document.frm_L.to.value = b
+}
 function TSubmit() {
     i = parseFloat(document.frm_T.i.value)
     di = document.frm_T.from.value
@@ -98,4 +127,20 @@ function TExchange() {
     b = document.frm_T.from.value
     document.frm_T.from.value = document.frm_T.to.value
     document.frm_T.to.value = b
+}
+function WSubmit() {
+    i = parseFloat(document.frm_W.i.value)
+    di = document.frm_W.from.value
+    dt = document.frm_W.to.value
+    exp = SICalc(di,dt)
+    o = i*Math.pow(10,exp)
+    document.frm_W.o.value = o
+}
+function WExchange() {
+    a = document.frm_W.o.value
+    document.frm_W.o.value = document.frm_W.i.value
+    document.frm_W.i.value = a
+    b = document.frm_W.from.value
+    document.frm_W.from.value = document.frm_W.to.value
+    document.frm_W.to.value = b
 }

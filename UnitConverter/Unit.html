@@ -11,21 +11,19 @@
     <form name="frm1">
         <select name="dd" onchange="ValP(this.value)">
             <option value="0" selected hidden>Select</option>
-            <option value="1" disabled>Area Converter</option>
+            <option value="1" disabled hidden>Area Converter</option>
             <option value="2">Energy Converter</option>
-            <option value="3" disabled>Length Converter</option>
-            <option value="4" disabled>Power Converter</option>
-            <option value="5" disabled>Pressure Converter</option>
-            <option value="6" disabled>Speed Converter</option>
+            <option value="3">Length Converter</option>
+            <option value="4" disabled hidden>Power Converter</option>
+            <option value="5" disabled hidden>Pressure Converter</option>
+            <option value="6" disabled hidden>Speed Converter</option>
             <option value="7">Temperature Converter</option>
-            <option value="8" disabled>Volume Converter</option>
-            <option value="9" disabled>Weight Converter</option>
+            <option value="8" disabled hidden>Volume Converter</option>
+            <option value="9">Weight Converter</option>
         </select>
     </form>
     <div id="Area" style="display: none;">
         Area
-        <br>
-        Work In Progress
     </div>
     <div id="Energy" style="display: none;">
         <table>
@@ -60,24 +58,94 @@
         </table>
     </div>
     <div id="Length" style="display: none;">
-        Length
-        <br>
-        Work In Progress
+        <table>
+            <form name="frm_L">
+                <tr>
+                    <td><label>From </label></td>
+                    <td><input type="textbox" name="i" placeholder="Enter the weight"></td>
+                    <td>
+                        <select name="from">
+                            <option value="quetta">quettagram</option>
+                            <option value="ronna">ronnagram</option>
+                            <option value="yotta">yottagram</option>
+                            <option value="zetta">zettagram</option>
+                            <option value="exa">exagram</option>
+                            <option value="peta">petagram</option>
+                            <option value="tera">teragram</option>
+                            <option value="quetta">quettameter</option>
+                            <option value="ronna">ronnameter</option>
+                            <option value="yotta">yottameter</option>
+                            <option value="zetta">zettameter</option>
+                            <option value="exa">exameter</option>
+                            <option value="peta">petameter</option>
+                            <option value="tera">terameter</option>
+                            <option value="giga">gigameter</option>
+                            <option value="mega">megameter</option>
+                            <option value="kilo">kilometer</option>
+                            <option value="hecto">hectometer</option>
+                            <option value="deca">decameter</option>
+                            <option value="AN" selected>meter</option>
+                            <option value="deci">decimeter</option>
+                            <option value="centi">centimeter</option>
+                            <option value="milli">millimeter</option>
+                            <option value="micro">micrometer</option>
+                            <option value="nano">nanometer</option>
+                            <option value="pico">picometer</option>
+                            <option value="femto">femtometer</option>
+                            <option value="atto">attometer</option>
+                            <option value="zepto">zeptometer</option>
+                            <option value="yocto">yoctometer</option>
+                            <option value="ronto">rontometer</option>
+                            <option value="quecto">quectometer</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr><td colspan="3"><input type="button" value="Exchange" onClick="LExchange()"></td></tr>
+                <tr>
+                    <td><label>To </label></td>
+                    <td><input type="textbox" name="o" disabled></td>
+                    <td>
+                        <select name="to">
+                            <option value="quetta">quettameter</option>
+                            <option value="ronna">ronnameter</option>
+                            <option value="yotta">yottameter</option>
+                            <option value="zetta">zettameter</option>
+                            <option value="exa">exameter</option>
+                            <option value="peta">petameter</option>
+                            <option value="tera">terameter</option>
+                            <option value="giga">gigameter</option>
+                            <option value="mega">megameter</option>
+                            <option value="kilo">kilometer</option>
+                            <option value="hecto">hectometer</option>
+                            <option value="deca">decameter</option>
+                            <option value="AN" selected>meter</option>
+                            <option value="deci">decimeter</option>
+                            <option value="centi">centimeter</option>
+                            <option value="milli">millimeter</option>
+                            <option value="micro">micrometer</option>
+                            <option value="nano">nanometer</option>
+                            <option value="pico">picometer</option>
+                            <option value="femto">femtometer</option>
+                            <option value="atto">attometer</option>
+                            <option value="zepto">zeptometer</option>
+                            <option value="yocto">yoctometer</option>
+                            <option value="ronto">rontometer</option>
+                            <option value="quecto">quectometer</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr><td colspan="3"><input type="button" value="Submit" onclick="LSubmit()"></td></tr>
+            </form>
+        </table>
     </div>
     <div id="Power" style="display: none;">
         Power
-        <br>
-        Work In Progress
     </div>
     <div id="Pressure" style="display: none;">
         Pressure
-        <br>
-        Work In Progress
     </div>
     <div id="Speed" style="display: none;">
         Speed
-        <br>
-        Work In Progress
     </div>
     <div id="Temperature" style="display: none;">
         <form name="frm_T">
@@ -111,13 +179,80 @@
     </div>
     <div id="Volume" style="display: none;">
         Volume
-        <br>
-        Work In Progress
     </div>
     <div id="Weight" style="display: none;">
-        Weight
-        <br>
-        Work In Progress
+        <table>
+            <form name="frm_W">
+                <tr>
+                    <td><label>From </label></td>
+                    <td><input type="textbox" name="i" placeholder="Enter the weight"></td>
+                    <td>
+                        <select name="from">
+                            <option value="quetta">quettagram</option>
+                            <option value="ronna">ronnagram</option>
+                            <option value="yotta">yottagram</option>
+                            <option value="zetta">zettagram</option>
+                            <option value="exa">exagram</option>
+                            <option value="peta">petagram</option>
+                            <option value="tera">teragram</option>
+                            <option value="giga">gigagram</option>
+                            <option value="mega">megagram</option>
+                            <option value="kilo">kilogram</option>
+                            <option value="hecto">hectogram</option>
+                            <option value="deca">decagram</option>
+                            <option value="AN" selected>gram</option>
+                            <option value="deci">decigram</option>
+                            <option value="centi">centigram</option>
+                            <option value="milli">milligram</option>
+                            <option value="micro">microgram</option>
+                            <option value="nano">nanogram</option>
+                            <option value="pico">picogram</option>
+                            <option value="femto">femtogram</option>
+                            <option value="atto">attogram</option>
+                            <option value="zepto">zeptogram</option>
+                            <option value="yocto">yoctogram</option>
+                            <option value="ronto">rontogram</option>
+                            <option value="quecto">quectogram</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr><td colspan="3"><input type="button" value="Exchange" onClick="WExchange()"></td></tr>
+                <tr>
+                    <td><label>To </label></td>
+                    <td><input type="textbox" name="o" disabled></td>
+                    <td>
+                        <select name="to">
+                            <option value="quetta">quettagram</option>
+                            <option value="ronna">ronnagram</option>
+                            <option value="yotta">yottagram</option>
+                            <option value="zetta">zettagram</option>
+                            <option value="exa">exagram</option>
+                            <option value="peta">petagram</option>
+                            <option value="tera">teragram</option>
+                            <option value="giga">gigagram</option>
+                            <option value="mega">megagram</option>
+                            <option value="kilo">kilogram</option>
+                            <option value="hecto">hectogram</option>
+                            <option value="deca">decagram</option>
+                            <option value="AN" selected>gram</option>
+                            <option value="deci">decigram</option>
+                            <option value="centi">centigram</option>
+                            <option value="milli">milligram</option>
+                            <option value="micro">microgram</option>
+                            <option value="nano">nanogram</option>
+                            <option value="pico">picogram</option>
+                            <option value="femto">femtogram</option>
+                            <option value="atto">attogram</option>
+                            <option value="zepto">zeptogram</option>
+                            <option value="yocto">yoctogram</option>
+                            <option value="ronto">rontogram</option>
+                            <option value="quecto">quectogram</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr><td colspan="3"><input type="button" value="Submit" onclick="WSubmit()"></td></tr>
+            </form>
+        </table>
     </div>
 </body>
 </html>
